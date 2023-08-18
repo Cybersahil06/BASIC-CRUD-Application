@@ -1,0 +1,44 @@
+<%- include("header") -%>
+
+
+<div class='container pt-5 pb-5'>
+    <h3> Write New Entry</h3><hr/>
+
+    <form action="/add" method="post">
+        <div class="mb-3">
+        <input type="text" placeholder="Name of Employee" class="form-control" name="username">
+    </div>
+
+    <div class="mb-3">
+        <input type="email" placeholder="Your Email Id" class="form-control" name="email">
+    </div>
+    
+    <div class="mb-3">
+        <input type="number" placeholder="Your Mobile No." class="form-control" name="phone">
+    </div>
+
+    <div class="mb-3">
+        <input type="text" placeholder="Name of Dept" class="form-control" name="dept">
+    </div>
+
+    <div class="mb-3">
+        <input type="number" placeholder="Your Salary" class="form-control" name="salary">
+    </div>
+    
+    <div class="row">
+        <div class="col-2">
+            <button class='btn btn-success' type="submit">Save Article</button>
+        </div>
+        <div class="col-2">
+            <button class='btn btn-secondary' type="reset">Reset Form</button>
+        </div>
+    </div>
+    </form>
+
+    <% if (result!='') { %>
+  <div class=' alert alert-success'> ✔ <h2 ><%= result %></h2></div>
+    <% } %>
+
+
+</div>
+<%- include("footer") -%>
